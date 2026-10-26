@@ -30,7 +30,7 @@ class ComponentFileSystem extends HTMLElement {
         if (sortedFiles.length === 0) {
             const text = document.createElement("h3");
             text.style.textAlign = "left"
-            text.textContent = "Folder is Empty."
+            text.textContent = "This folder is empty... for now."
             directory.appendChild(text);
         }
         else {
@@ -112,7 +112,7 @@ class ComponentFile extends HTMLElement {
         name.textContent = this.getAttribute("data-name");
 
         const lastModified = document.createElement("h3");
-        let lastModifiedContent = "01 JAN 1970 00:00";
+        let lastModifiedContent = "";
         if (this.hasAttribute("data-last-modified")) {
             lastModifiedContent = this.getAttribute("data-last-modified");
         }
