@@ -3,15 +3,6 @@ import { isDocumentReady } from "./common.js";
 import { hasMusic, stateChangeMusic, fillMusic } from "./file-type/audio-stream.js";
 import { hasImage, stateChangeImage, fillImages } from "./file-type/image.js";
 
-//hack to avoid white flash while loading stylesheet
-document.body.style.backgroundColor = "black";
-
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = new URL('./style.css', import.meta.url).href;
-document.head.appendChild(link);
-
 if (history.state !== null) {
     history.back();
 }
